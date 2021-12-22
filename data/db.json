@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "The Best Designs for React",
+      "author": "Bob Cobb",
+      "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, odit porro. At corrupti vel possimus laudantium dignissimos quas asperiores eius quod aliquam vitae sequi, recusandae ex eligendi itaque voluptatum quibusdam laborum labore dolore sapiente esse architecto ipsa molestiae. Expedita numquam qui iste! Ipsam id obcaecati iste corrupti quas consectetur consequuntur, non accusantium pariatur mollitia, molestiae animi. Odit, libero! Similique quidem amet, expedita fuga unde itaque voluptatum earum eaque debitis deleniti ab dolorum deserunt totam sapiente, libero ipsa officia quos dolor odit minus? Eveniet fuga cupiditate magnam dignissimos."
+    },
+    {
+      "id": "2",
+      "title": "Latest and Greatest Extensions for React",
+      "author": "Hal Hope",
+      "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, odit porro. At corrupti vel possimus laudantium dignissimos quas asperiores eius quod aliquam vitae sequi, recusandae ex eligendi itaque voluptatum quibusdam laborum labore dolore sapiente esse architecto ipsa molestiae. Expedita numquam qui iste! Ipsam id obcaecati iste corrupti quas consectetur consequuntur, non accusantium pariatur mollitia, molestiae animi. Odit, libero! Similique quidem amet, expedita fuga unde itaque voluptatum earum eaque debitis deleniti ab dolorum deserunt totam sapiente, libero ipsa officia quos dolor odit minus? Eveniet fuga cupiditate magnam dignissimos."
+    },
+    {
+      "id": "3",
+      "title": "News from the Developer Conference",
+      "author": "Mel Mope",
+      "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, odit porro. At corrupti vel possimus laudantium dignissimos quas asperiores eius quod aliquam vitae sequi, recusandae ex eligendi itaque voluptatum quibusdam laborum labore dolore sapiente esse architecto ipsa molestiae. Expedita numquam qui iste! Ipsam id obcaecati iste corrupti quas consectetur consequuntur, non accusantium pariatur mollitia, molestiae animi. Odit, libero! Similique quidem amet, expedita fuga unde itaque voluptatum earum eaque debitis deleniti ab dolorum deserunt totam sapiente, libero ipsa officia quos dolor odit minus? Eveniet fuga cupiditate magnam dignissimos."
+    }
+  ]
+}

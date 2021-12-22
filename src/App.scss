@@ -1,0 +1,39 @@
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+
+  nav {
+    display: flex;
+    margin: 0 auto 60px;
+    gap: 10px;
+    align-items: center;
+
+    h1 {
+      margin-right: auto;
+    }
+
+    a {
+      color: #333;
+      padding: 4px 10px;
+    }
+
+    .active {
+      color: red;
+      font-weight: bold;
+    }
+  }
+}
+
+.article {
+  border-bottom: 1px solid #ddd;
+
+  h3 {
+    span {
+      font-weight: normal;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
