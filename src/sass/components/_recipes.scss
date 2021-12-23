@@ -1,0 +1,102 @@
+@use '../abstracts' as a;
+@use '../mixins' as m;
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  @include m.xl {
+    padding: 0;
+  }
+
+  .card {
+    background-color: a.$white;
+    color: a.$text-color;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      transform: rotate(1deg);
+    }
+
+    h3 {
+      color: darken(a.$text-color, 10%);
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: lighten(a.$text-color, 10%);
+      font-size: 0.9rem;
+    }
+
+    div {
+      color: darken(a.$text-color, 10%);
+      font-size: 0.7rem;
+      margin: 20px 0;
+      line-height: 1.5rem;
+    }
+
+    a {
+      color: darken(a.$text-color, 10%);
+      text-decoration: none;
+      display: block;
+      background: #e2e2e2;
+      font-size: 0.9rem;
+      text-align: center;
+      width: 120px;
+      padding: 8px;
+      border-radius: 4px;
+      margin: 20px auto 0;
+
+      &:hover {
+        color: a.$white;
+        background: a.$black;
+      }
+    }
+  }
+}
+
+.recipe {
+  background-color: a.$white;
+  padding: 1.5rem;
+
+  h3 {
+    color: lighten(a.$text-color, 10%);
+    margin-bottom: 6px;
+  }
+
+  ul {
+    li {
+      color: lighten(a.$text-color, 10%);
+
+      &::after {
+        content: ',';
+      }
+
+      &:last-child::after {
+        content: '.';
+      }
+    }
+  }
+
+  .preparation {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+  .ingredients {
+    margin-top: 1rem;
+  }
+
+  .instructions {
+    text-align: left;
+    line-height: 1.5rem;
+  }
+}

@@ -1,0 +1,71 @@
+@use '../abstracts' as a;
+
+.create {
+  form {
+    color: a.$text-color;
+    max-width: 480px;
+    margin: 60px auto;
+
+    label > span {
+      font-weight: bold;
+      display: block;
+      margin: 30px 0 10px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 0.8rem;
+    }
+
+    button {
+      display: block;
+      width: 100px;
+      font-size: 1rem;
+      color: a.$white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 4px;
+      background: a.$primary-color;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      margin: 20px auto;
+
+      &:hover {
+        background: a.$white;
+        color: a.$primary-color;
+      }
+    }
+
+    .ingredients {
+      display: flex;
+      align-items: center;
+
+      button {
+        margin: 0 0 0 10px;
+      }
+    }
+
+    .ingredient-list {
+      font-size: 0.9rem;
+      display: block;
+      margin: 4px 0 0 4px;
+
+      span {
+        display: inline-block;
+      }
+
+      .single-ingredient {
+        margin-right: 4px;
+
+        &::after {
+          content: ',';
+        }
+
+        &:last-child::after {
+          content: '';
+        }
+      }
+    }
+  }
+}

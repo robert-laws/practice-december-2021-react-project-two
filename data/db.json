@@ -1,0 +1,66 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Vegetable Lasagna",
+      "ingredients": [
+        "1 tablespoon olive oil",
+        "1 onion, chopped",
+        "2 cloves garlic, chopped",
+        "2 tablespoons chopped fresh parsley",
+        "1 (28 ounce) can crushed tomatoes",
+        "pasta noodles"
+      ],
+      "instructions": "1. Preheat oven to 350 degrees F. 2. In a large bowl, combine the olive oil, onion, garlic, parsley, and tomatoes. 3. Add the noodles and toss to coat evenly. 4. Bake for 20 minutes. 5. Serve with additional parsley and additional olive oil.",
+      "cookingTime": "45"
+    },
+    {
+      "id": "2",
+      "title": "Chicken Parmesan",
+      "ingredients": [
+        "2 chicken breasts",
+        "2 tablespoons chopped fresh parsley",
+        "1 (28 ounce) can crushed tomatoes",
+        "parmesan cheese"
+      ],
+      "instructions": "1. Preheat oven to 350 degrees F. 2. In a large bowl, combine the olive oil, onion, garlic, parsley, and tomatoes. 3. Add the noodles and toss to coat evenly. 4. Bake for 20 minutes. 5. Serve with additional parsley and additional olive oil.",
+      "cookingTime": "90"
+    },
+    {
+      "id": "3",
+      "title": "Pizza",
+      "ingredients": [
+        "wheat flour",
+        "salt",
+        "water",
+        "yeast",
+        "1 (28 ounce) can crushed tomatoes",
+        "mozzarella cheese"
+      ],
+      "instructions": "Combine ingredients for pizza dough. Leave to let the dough rise. Add toppings and bake for 20 minutes. Serve with additional parsley and additional olive oil.",
+      "cookingTime": "25"
+    },
+    {
+      "title": "Bread",
+      "cookingTime": "30",
+      "instructions": "make dough...",
+      "ingredients": [
+        "salt",
+        "water",
+        "yeast"
+      ],
+      "id": "cT3Q27t"
+    },
+    {
+      "title": "Burger",
+      "cookingTime": "20",
+      "instructions": "put together burger",
+      "ingredients": [
+        "meat",
+        "bread",
+        "cheese"
+      ],
+      "id": "2QNqD2C"
+    }
+  ]
+}

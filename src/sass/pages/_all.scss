@@ -1,0 +1,11 @@
+@use '../abstracts' as a;
+
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+
+  h2 {
+    color: a.$text-color;
+    margin-bottom: 20px;
+  }
+}
