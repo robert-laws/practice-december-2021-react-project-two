@@ -5,6 +5,14 @@
   color: a.$white;
   padding: 20px;
 
+  &.blue {
+    background-color: blue;
+  }
+
+  &.pink {
+    background-color: pink;
+  }
+
   nav {
     display: flex;
     align-items: center;
