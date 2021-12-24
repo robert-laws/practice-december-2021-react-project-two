@@ -9,6 +9,13 @@ const themeReducer = (state, action) => {
         ...state,
         color: action.payload,
       };
+
+    case 'CHANGE_MODE':
+      return {
+        ...state,
+        mode: action.payload,
+      };
+
     default:
       return state;
   }
@@ -17,14 +24,21 @@ const themeReducer = (state, action) => {
 export const ThemeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, {
     color: 'default',
+    mode: 'light',
   });
 
   const changeColor = (color) => {
     dispatch({ type: 'CHANGE_COLOR', payload: color });
   };
 
+  const changeMode = (mode) => {
+    dispatch({ type: 'CHANGE_MODE', payload: mode });
+  };
+
   return (
-    <ThemeContext.Provider value={{ color: state.color, changeColor }}>
+    <ThemeContext.Provider
+      value={{ color: state.color, mode: state.mode, changeColor, changeMode }}
+    >
       {children}
     </ThemeContext.Provider>
   );
