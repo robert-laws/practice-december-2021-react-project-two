@@ -9,3 +9,15 @@ main {
     margin-bottom: 20px;
   }
 }
+
+.App {
+  &.light {
+    background-color: lighten(a.$black, 15%);
+    color: a.$white;
+  }
+
+  &.dark {
+    background-color: darken(a.$white, 15%);
+    color: a.$text-color;
+  }
+}

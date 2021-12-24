@@ -14,37 +14,45 @@
   }
 
   .card {
-    background-color: a.$white;
-    color: a.$text-color;
     padding: 20px;
     border-radius: 4px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     position: relative;
 
+    &.light {
+      background-color: a.$white;
+      color: a.$text-color;
+    }
+
+    &.dark {
+      background-color: a.$black;
+      color: a.$white;
+    }
+
     &:hover {
       transform: rotate(1deg);
     }
 
     h3 {
-      color: darken(a.$text-color, 10%);
+      // color: darken(a.$text-color, 10%);
       margin-bottom: 6px;
     }
 
     p {
-      color: lighten(a.$text-color, 10%);
+      // color: lighten(a.$text-color, 10%);
       font-size: 0.9rem;
     }
 
     div {
-      color: darken(a.$text-color, 10%);
+      // color: darken(a.$text-color, 10%);
       font-size: 0.7rem;
       margin: 20px 0;
       line-height: 1.5rem;
     }
 
     a {
-      color: darken(a.$text-color, 10%);
+      // color: darken(a.$text-color, 10%);
       text-decoration: none;
       display: block;
       background: #e2e2e2;
@@ -64,8 +72,17 @@
 }
 
 .recipe {
-  background-color: a.$white;
   padding: 1.5rem;
+
+  &.light {
+    background-color: a.$white;
+    color: a.$text-color;
+  }
+
+  &.dark {
+    background-color: a.$black;
+    color: a.$white;
+  }
 
   h3 {
     color: lighten(a.$text-color, 10%);
