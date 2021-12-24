@@ -5,12 +5,20 @@
   color: a.$white;
   padding: 20px;
 
+  &.default {
+    background-color: a.$primary-color;
+  }
+
   &.blue {
     background-color: blue;
   }
 
   &.pink {
     background-color: pink;
+  }
+
+  &.green {
+    background-color: green;
   }
 
   nav {
@@ -46,6 +54,39 @@
         color: a.$primary-color;
         background-color: a.$white;
       }
+    }
+  }
+}
+
+.theme-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 20px auto 0px;
+
+  .theme-buttons > div {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0px 5px;
+
+    &.blue {
+      background-color: blue;
+    }
+
+    &.pink {
+      background-color: pink;
+    }
+
+    &.green {
+      background-color: green;
+    }
+
+    &.crimson {
+      background-color: a.$primary-color;
     }
   }
 }

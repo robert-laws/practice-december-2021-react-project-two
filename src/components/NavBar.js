@@ -3,10 +3,10 @@ import { SearchBar } from './SearchBar';
 import { useTheme } from '../hooks/useTheme';
 
 export const NavBar = () => {
-  const { color, changeColor } = useTheme();
+  const { color } = useTheme();
 
   return (
-    <div className={`navbar ${color}`} onClick={() => changeColor('pink')}>
+    <div className={`navbar ${color}`}>
       <nav>
         <NavLink className='brand' to='/'>
           <h1>Cooking App</h1>

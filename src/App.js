@@ -1,13 +1,14 @@
 import './sass/App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Create, Home, Recipe, Search, NotFound } from './pages';
-import { NavBar } from './components';
+import { NavBar, ThemeSelector } from './components';
 
 function App() {
   return (
     <div className='App'>
       <Router>
         <NavBar />
+        <ThemeSelector />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/create' element={<Create />} />
