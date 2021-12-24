@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useRef, useState, useEffect } from 'react';
-import { useFetch } from '../hooks/useFetch';
+import { useRef, useState } from 'react';
+// import { useFetch } from '../hooks/useFetch';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 export const Create = () => {
   const [newIngredient, setNewIngredient] = useState('');
@@ -11,13 +12,15 @@ export const Create = () => {
     instructions: '',
     ingredients: [],
   });
+  // const [data, setData] = useState(null);
+  const [error, setError] = useState(false);
 
   const navigate = useNavigate();
 
-  const { postData, data, error } = useFetch(
-    'http://localhost:3001/recipes',
-    'POST'
-  );
+  // const { postData, data, error } = useFetch(
+  //   'http://localhost:3001/recipes',
+  //   'POST'
+  // );
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -42,14 +45,25 @@ export const Create = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // console.log(recipe);
-    postData(recipe);
+    // postData(recipe);
+
+    const db = getFirestore();
+    const colRef = collection(db, 'recipes');
+
+    try {
+      addDoc(colRef, recipe).then(() => {
+        navigate('/');
+      });
+    } catch (err) {
+      setError(err);
+    }
   };
 
-  useEffect(() => {
-    if (data && !error) {
-      navigate('/');
-    }
-  }, [data, error, navigate]);
+  // useEffect(() => {
+  //   if (data && !error) {
+  //     navigate('/');
+  //   }
+  // }, [data, error, navigate]);
 
   return (
     <main className='create'>
