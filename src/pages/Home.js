@@ -15,7 +15,7 @@ export const Home = () => {
     const db = getFirestore();
     const colRef = collection(db, 'recipes');
 
-    onSnapshot(
+    const unsubscribeSnaphot = onSnapshot(
       colRef,
       (snapshot) => {
         let recipes = [];
@@ -37,6 +37,10 @@ export const Home = () => {
       }
     );
     setIsPending(false);
+
+    return () => {
+      unsubscribeSnaphot();
+    };
   }, []);
 
   return (

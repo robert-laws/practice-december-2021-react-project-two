@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 // import { useFetch } from '../hooks/useFetch';
 import { useTheme } from '../hooks/useTheme';
 import { useEffect, useState } from 'react';
-import { getFirestore, onSnapshot, doc } from 'firebase/firestore';
+import { getFirestore, onSnapshot, doc, updateDoc } from 'firebase/firestore';
 
 export const Recipe = () => {
   const { mode } = useTheme();
@@ -17,7 +17,7 @@ export const Recipe = () => {
     setIsPending(true);
     const db = getFirestore();
     const docRef = doc(db, 'recipes', id);
-    onSnapshot(
+    const unsubscribeDocument = onSnapshot(
       docRef,
       (doc) => {
         if (doc.data()) {
@@ -31,7 +31,20 @@ export const Recipe = () => {
       }
     );
     setIsPending(false);
+
+    return () => {
+      unsubscribeDocument();
+    };
   }, [id]);
+
+  const handleUpdate = async () => {
+    const db = getFirestore();
+    const docRef = doc(db, 'recipes', id);
+
+    await updateDoc(docRef, {
+      title: `Updated Title for ${recipe.title}`,
+    });
+  };
 
   return (
     <main>
@@ -56,6 +69,7 @@ export const Recipe = () => {
             ))}
           </ul>
           <p className='instructions'>{recipe.instructions}</p>
+          <button onClick={handleUpdate}>Update</button>
         </div>
       )}
     </main>
